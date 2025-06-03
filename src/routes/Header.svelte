@@ -1,24 +1,13 @@
 <script lang="ts">
-    let { 
-        name,
-        fakeName = null,
-     }: {
-        name: string,
-        fakeName?: string | null,
-    } = $props();
+	let {
+		name
+	}: {
+		name: string;
+	} = $props();
 </script>
 
-
-<h1>Hello {name}</h1>
-<h2>{name.replaceAll("c", "x")}</h2>
-<h3>{fakeName}</h3>
-
-
-<style>
-    h1 {
-        color: blue;
-        font-size: 2em;
-        text-align: center;
-        margin-top: 20px;
-    }
-</style>
+<div>
+	<h1>
+		{name ? name: 'User'}'s Form
+	</h1>
+</div>
